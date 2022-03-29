@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- add title -->
+<title>IMBb - Clone</title>
+
+<!-- add fevicon -->
+<link rel="shortcut icon" href="imdb.png" type="image/x-icon">
+
+<!-- add bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<!-- add css  -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+<!-- nav bar  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+<!-- this is declare for nav of our page -->
+<a class="navbar-brand" href="#">IMDb Clone</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+<ul class="navbar-nav">
+<li class="nav-item active">
+<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.imdb.com/registration/signin?ref=nv_generic_lgin&u=%2F">Sign In</a>
+</li>
+
+<!-- this is for nav select ur lanuage -->
+<select id="lang" data-placeholder="Choose a Language...">
+<option value="English">English</option>
+<option value="Afrikaans">Afrikaans</option>
+<option value="Albanian">Albanian</option>
+<option value="Arabic">Arabic</option>
+<option value="Armenian">Armenian</option>
+<option value="Basque">Basque</option>
+<option value="Bengali">Bengali</option>
+<option value="Bulgarian">Bulgarian</option>
+<option value="Catalan">Catalan</option>
+<option value="Cambodian">Cambodian</option>
+<option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+<option value="Croatian">Croatian</option>
+<option value="Czech">Czech</option>
+<option value="Danish">Danish</option>
+<option value="Dutch">Dutch</option>
+<option value="Estonian">Estonian</option>
+<option value="Fiji">Fiji</option>
+<option value="Finnish">Finnish</option>
+<option value="French">French</option>
+<option value="Georgian">Georgian</option>
+<option value="German">German</option>
+<option value="Greek">Greek</option>
+<option value="Gujarati">Gujarati</option>
+<option value="Hebrew">Hebrew</option>
+<option value="Hindi">Hindi</option>
+<option value="Hungarian">Hungarian</option>
+<option value="Icelandic">Icelandic</option>
+<option value="Indonesian">Indonesian</option>
+<option value="Irish">Irish</option>
+<option value="Italian">Italian</option>
+<option value="Japanese">Japanese</option>
+<option value="Javanese">Javanese</option>
+<option value="Korean">Korean</option>
+<option value="Latin">Latin</option>
+<option value="Latvian">Latvian</option>
+<option value="Lithuanian">Lithuanian</option>
+<option value="Macedonian">Macedonian</option>
+<option value="Malay">Malay</option>
+<option value="Malayalam">Malayalam</option>
+<option value="Maltese">Maltese</option>
+<option value="Maori">Maori</option>
+<option value="Marathi">Marathi</option>
+<option value="Mongolian">Mongolian</option>
+<option value="Nepali">Nepali</option>
+<option value="Norwegian">Norwegian</option>
+<option value="Persian">Persian</option>
+<option value="Polish">Polish</option>
+<option value="Portuguese">Portuguese</option>
+<option value="Punjabi">Punjabi</option>
+<option value="Quechua">Quechua</option>
+<option value="Romanian">Romanian</option>
+<option value="Russian">Russian</option>
+<option value="Samoan">Samoan</option>
+<option value="Serbian">Serbian</option>
+<option value="Slovak">Slovak</option>
+<option value="Slovenian">Slovenian</option>
+<option value="Spanish">Spanish</option>
+<option value="Swahili">Swahili</option>
+<option value="Swedish ">Swedish </option>
+<option value="Tamil">Tamil</option>
+<option value="Tatar">Tatar</option>
+<option value="Telugu">Telugu</option>
+<option value="Thai">Thai</option>
+<option value="Tibetan">Tibetan</option>
+<option value="Tonga">Tonga</option>
+<option value="Turkish">Turkish</option>
+<option value="Ukrainian">Ukrainian</option>
+<option value="Urdu">Urdu</option>
+<option value="Uzbek">Uzbek</option>
+<option value="Vietnamese">Vietnamese</option>
+<option value="Welsh">Welsh</option>
+<option value="Xhosa">Xhosa</option>
+</select>
+<!-- nav bar ends  -->
+</li>
+</ul>
+</div>
+</nav>
+
+<!-- add favorites movies-->
+<div id="wrapper">
+
+<!-- heading name -->
+<header>
+<h1>Movie Favorites</h1>
+<p>Movies to watch</p>
+<form>
+<input type="text" id="search-movie" placeholder="">
+</form>
+
+<!-- header for add favroites movies -->
+</header>
+<ul id="movie-list">
+   
+<!-- deciption for how to movies is add  -->
+<li>
+<span class="title">Add Movies</span>
+<span class="delete">delete</span>
+</li>
+
+<li>
+<span class="title">Search All Movies From Bottom</span>
+<span class="delete">delete</span>
+</li>
+
+<li>
+<span class="title">Type Favorites Movie Name And Click Add</span>
+<span class="delete">delete</span>
+</li>
+
+<li>
+<span class="title">Delete Button For Delete</span>
+<span class="delete">delete</span>
+</li>
+
+<li>
+<span class="title">Hide Button For Hinde All Movies From Home page</span>
+<span class="delete">delete</span>
+</li>
+</ul>
+
+<!-- add fav movies  -->
+<form id="add-movie">
+<div class="checkbox-div">
+<input type="checkbox" id="hide">
+<label for="hide">Hide all movies</label>
+</div>
+
+<!-- add button -->
+<input type="text" placeholder="Add a movie" id="add-movie-input">
+<button>Add</button>
+</form>
+</div>
+
+
+<!-- search jumbo tron starts -->
+<div class="jumbotron jumbotron-fluid">
+<div class="container" style="text-align:center">
+<img id="style"  src="imdb2.png" alt="logo">
+<form id="searchForm" type="submit">
+<div class="row">
+<div class="col">
+
+<!-- movies serch -->
+<div class = "search-container">
+<div class = "search-element">
+<h3>Search Movie :-</h3>
+<input type = "text" class = "form-control" placeholder="Search Movie Title ..." id = "movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
+</div>
+<div class = "search-list" id = "search-list">
+</div>
+</div>
+</div>
+</div>
+
+<!-- this is for movies seach button -->
+<button type="submit" class="btn btn-primary">Search </button>
+</form>
+</div>
+</div>
+
+<!-- Movies page -->
+<h1>MOVIE PAGE :-</h1>
+
+<!-- movies card -->
+<div id="movies">
+</div>
+
+<!-- this use for dailog bix -->
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+</div>
+</div>
+<!-- happy ending -->
+
+</body>
+
+<!-- links js -->
+<script
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/index.js" charset="utf-8"></script>
+<script src="./js/script.js"></script>
+
+
+</html>
